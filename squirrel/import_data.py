@@ -17,19 +17,19 @@ class Command(BaseCommand):
                 reader = csv.DictReader(f)
                 for i in reader:
                     s = Squirrels(
-                        X=i['X'],
-                        Y=i['Y'],
-                        Unique_squirrel_id=i['Unique Squirrel ID'],
-                        Shift=i['Shift'],
-                        Date=datetime.date(
+                        Longitutde = i['X'],
+                        Latitude = i['Y'],
+                        Unique_squirrel_id = i['Unique Squirrel ID'],
+                        Shift = i['Shift'],
+                        Date = datetime.date(
                             int(i['Date'][-4:]), int(i['Date'][:2]), int(i['Date'][2:4])),
-                        Age=i['Age'],
-                        Primary_Fur_Color=i['Primary Fur Color'],
-                        Location=i['Location'],
-                        Specific_location=i['Specific Location'],
-                        Running=i['Running'].upper(),
-                        Chasing=i['Chasing'].upper(),
-                        Climbing=i['Climbing'].upper(),
+                        Age = i['Age'],
+                        Primary_fur_color = i['Primary Fur Color'],
+                        Location = i['Location'],
+                        Specific_location = i['Specific Location'],
+                        Running = i['Running'].upper(),
+                        Chasing = i['Chasing'].upper(),
+                        Climbing = i['Climbing'].upper(),
                         Eating=i['Eating'].upper(),
                         Foraging=i['Foraging'].upper(),
                         Other_activities=i['Other Activities'],
