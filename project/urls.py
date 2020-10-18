@@ -23,6 +23,6 @@ urlpatterns = [
     path('', include('squirrel.urls')),
     path('admin/', admin.site.urls),
     #path('map/', include('maps.urls')),
-    path('sighting/', views.sighting),
-    path('homepage/', views.homepage),
+    #path('sighting/', views.sighting),
+    #path('homepage/', views.homepage),
 ]
