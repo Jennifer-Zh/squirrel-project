@@ -6,12 +6,12 @@ from django.forms import ModelForm
 
 # create squirrel
 class Squirrel(models.Model):
-    Latitude = models.FloatField(
-        help_text = _('Latitude Y'),
+    Longitude  = models.FloatField(
+        help_text = _('Longitude X'),
     )
 
-    Longitude = models.FloatField(
-        help_text = _('Longitude X'),
+    Latitude = models.FloatField(
+        help_text = _('Latitude Y'),
     )
 
     Unique_squirrel_id = models.CharField(
