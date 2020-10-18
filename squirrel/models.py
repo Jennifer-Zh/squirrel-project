@@ -10,7 +10,7 @@ class Squirrel(models.Model):
         help_text = _('Latitude Y'),
     )
 
-    Longtitude = models.FloatField(
+    Longitude = models.FloatField(
         help_text = _('Longitude X'),
     )
 
@@ -143,4 +143,5 @@ class Squirrel(models.Model):
 
     def __str__(self):
         return self.Unique_squirrel_id
+
 
