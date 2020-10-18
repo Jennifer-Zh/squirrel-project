@@ -13,8 +13,12 @@ def index(request):
 def homepage(request):
     return HttpResponse('Homepage')
 
-def mapping(request):
-    return HttpResponse('Map')
+def map(request):
+    sightings = Sighting.objects.all()[:100]
+    context = {
+        'sightings' : sightings,
+        }
+    return render(request, 'squirrel/map.html', context)
 
 def sighting(request):
     return HttpResponse('Sightings') 
