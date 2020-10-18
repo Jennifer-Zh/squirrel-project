@@ -14,10 +14,10 @@ def homepage(request):
     return HttpResponse('Homepage')
 
 def map(request):
-#    sightings = Sighting.objects.all()[:100]
-#    context = {
- #       'sightings' : sightings,
-  #      }
+    sightings = Squirrel.objects.all()[:100]
+    context = {
+       'squirrel' : sightings,
+    }
     return render(request, 'map.html',{})
 
 def sighting(request):
