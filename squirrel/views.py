@@ -19,7 +19,12 @@ def map(request):
     return render(request, 'map.html', context) 
 
 def sighting(request):
-    return HttpResponse('Sightings') 
+    squirrels  = Squirrel.objects.all()
+    context = {
+       'squirrels' : squirrels,
+       }
+    return render(request, 'sighting.html', context)
+
 
 def sighting_update(request, unique_id): 
     Object = get_object_or_404(Squirrel, Unique_squirrel_id = unique_id) 
