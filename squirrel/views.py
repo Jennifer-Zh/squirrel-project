@@ -43,7 +43,7 @@ def sighting_update(request, unique_id):
 
 def sighting_add(request): 
     if request.method == 'POST': 
-        form = Form(request.POSE) 
+        form = Form(request.POST) 
         if form.is_valid():
             form.save()
         return redirect('/sightings/')
