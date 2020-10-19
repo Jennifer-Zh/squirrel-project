@@ -8,7 +8,11 @@ from .models import Squirrel
 from django.views.generic import TemplateView, ListView
 
 def index(request):
-    return HttpResponse('Home')
+    squirrels=Squirrel.object.all()
+    context={
+        'squirrels':squirrels
+    }
+    return render(request,'sightings/index.html',context)
 
 def homepage(request):
     return HttpResponse('Homepage')
