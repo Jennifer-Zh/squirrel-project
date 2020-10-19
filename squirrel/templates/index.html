@@ -33,22 +33,10 @@
    <nav class="nav d-flex justify-content-between">
       <a class="p-2 text-muted" href="/stats/">Statistics</a >
       <a class="p-2 text-muted" href="/map/">Squirrels Map</a >
+      <a class="p-2 text-muted" href="/sightings/">Unique  Squirrels</a >
       <a class="p-2 text-muted" href="/add/">Add new Squirrel</a >
    </nav>
   </div>
-
-  <div>
-    <ul>
-      {% for squirrel in squirrels %}
-      <li>
-
-        <a href='/sightings/{{squirrel.Unique_squirrel_id}}/'>{{ squirrel.Unique_squirrel_id }}</a>
-
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  
   <script src="https://code.jquery.com/jquery-3.4.0.min.js"
     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
