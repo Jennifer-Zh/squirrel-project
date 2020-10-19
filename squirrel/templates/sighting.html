@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Squirrel sightings</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style type="text/css">
+    h1 {
+      color: Black;
+      font-size: 50pt;
+      font-family: Comic Sans MS;
+    }
+
+    body {
+      color: #FFB5A5;
+      font-size: 16pt;
+      font-family: times;
+      background: #EEFFD0;
+    }
+
+    ul {
+      columns: 4;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div>
+    <ul>
+      {% for squirrel in squirrels %}
+      <li>
+
+        <a href='/sightings/{{squirrel.Unique_squirrel_id}}/'>{{ squirrel.Unique_squirrel_id }}</a>
+
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</body>
+
+</html>
