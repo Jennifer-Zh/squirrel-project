@@ -4,6 +4,9 @@ from django.db import models
 from django.utils.translation import gettext as _
 from django.forms import ModelForm
 
+class Meta: 
+    managed = True 
+
 # create squirrel
 class Squirrel(models.Model):
     Longitude  = models.FloatField(

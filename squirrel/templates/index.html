@@ -13,7 +13,6 @@
       font-family: Arial;
     }
 
-
     body {
       color: white;
       font-size: 16pt;
@@ -35,7 +34,7 @@
     <a href='/sightings/stats/' class='col-4'>
       <center>
         <button type="button" class='btn btn-lg btn-primary button mt-4'>Squirrels Stats Summary</button>
-      </center>
+     </center>
     </a>
     <a href='/sightings/new/' class='col-4'>
       <center>
@@ -55,7 +54,7 @@
       {% for squirrel in squirrels %}
       <li>
 
-        <a href='{{ squirrel.Unique_squirrel_id}}'>{{ squirrel.Unique_squirrel_id }}</a>
+        <a href='/sightings/{{squirrel.Unique_squirrel_id}}/'>{{ squirrel.Unique_squirrel_id }}</a>
 
       </li>
       {% endfor %}
