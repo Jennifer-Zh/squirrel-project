@@ -46,7 +46,10 @@ def sighting_add(request):
         form = Form(request.POSE) 
         if form.is_valid():
             form.save()
-        return redirect('/sighting/') 
+        return redirect('/sightings/')
+    else:
+        form = Form()
+    return render(request, 'sighting_add.html', {'form':form})
 
     
 
