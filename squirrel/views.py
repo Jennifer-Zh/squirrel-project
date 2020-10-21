@@ -51,6 +51,12 @@ def sighting_add(request):
         form = Form()
     return render(request, 'sighting_add.html', {'form':form})
 
-    
+def stats(request):
+    squirrels = Squirrel.objects.all()
+    context = {
+           'Squirrels Running'=Squirrel.objects.filter(running=True).count()
+           'Squirrels Chasing'= Squirrel.objects.filter(Chasing=True).count()
+           }
+    return render(request, 'stats.html', context)
 
 

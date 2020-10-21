@@ -10,6 +10,6 @@ urlpatterns = [
     path('sightings/', views.sighting),
     path('sightings/add/', views.sighting_add,name='add'),
     path('sightings/<unique_id>/', views.sighting_update, name='update'),
-    #path('sighting/stats/', views.general_stats), 
+    path('sightings/stats/', views.general_stats, name='stats), 
 ]
 
