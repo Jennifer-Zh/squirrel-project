@@ -14,25 +14,45 @@
     }
 
     body {
-      color: #FFB5A5;
+      color: Black;
       font-size: 16pt;
       font-family: times;
       background: #EEFFD0;
     }
 
-    ul {
-      columns: 4;
-    }
   </style>
 
 </head>
 
 <body>
-  <h1 class="strong mt-3 text-center">Squirrels Statistics</h1>
-       <p>Summary Data</p> 
-            <ul>Squrriels actions and numbers:
-		    <li>Squirrels Running:</li>
-             </ul>
+
+   
+  <h1 class="strong mt-3 text-center">Squirrels Statistics</h1>  
+            
+  <br> <p>
+<ul>
+	    <br>Total Number of Unique ID Squirrels:{{total}}
+	    <br />
+
+	     <br>Some Percentages:
+		    <li>Percentage of adult squirrels:{{adultper}}</li>
+		    <li>Percentage of juvenile squirrels:{{jueper}}</li>
+		    <li>Percentage of squirrels found in AM shift:{{amper}}</li>
+		    <li>Percentage of squirrels found in PM shift:{{pmper}}</li>
+           
+             <br> Squrriels' Actions Summary:
+		    <li>Number of squirrels running:{{running}}</li>
+		    <li>Number of squirrels climbing:{{climbing}}</li>
+		    <li>Number of squirrels chasing:{{chasing}}</li>
+		    <li>Number of squirrels eating:{{eating}}</li>
+             
+	     <br> Squrriels' Tail Feature Summary:
+                    <li>Number of squirrels' tail flag:{{tailflag}}</li>
+		    <li>Number of squirrels' tail twitch:{{tailtwitch}}</li>
+    </ul>
+    <a href='/sightings/' class=''><button type='button' class='button'>Back to sightings home page</button></a>
+	     </p>
+
 </body>
 
 </html>

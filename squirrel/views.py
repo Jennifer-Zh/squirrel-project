@@ -52,12 +52,30 @@ def sighting_add(request):
     return render(request, 'sighting_add.html', {'form':form})
 
 def stats(request):
-    squirrels = Squirrel.objects.all()
+    total = Squirrel.objects.count()
+    adultper=round(Squirrel.objects.filter(Age='Adult').count()/total,2)
+    jueper=round(Squirrel.objects.filter(Age='Juvenile').count()/total,2)
+    pmper=round(Squirrel.objects.filter(Shift='PM').count()/total,2)
+    amper=round(Squirrel.objects.filter(Shift='AM').count()/total,2)
+    
     running= Squirrel.objects.filter(Running=True).count()
     chasing=Squirrel.objects.filter(Chasing=True).count()
+    climbing=Squirrel.objects.filter(Climbing=True).count()
+    eating=Squirrel.objects.filter(Eating=True).count()
+    tailflag=Squirrel.objects.filter(Tail_flags=True).count()
+    tailtwitch=Squirrel.objects.filter(Tail_twitches=True).count()
     context = {
-            'Squirrels Running' : running,
-            'Squirrels Chasing': chasing,
+            'climbing':climbing,
+            'running' : running,
+            'chasing': chasing,
+            'eating':eating,
+            'tailflag':tailflag,
+            'total':total,
+            'adultper':adultper,
+            'jueper':jueper,
+            'pmper':pmper,
+            'amper':amper,
+            'tailtwitch':tailtwitch,
            }
     return render(request, 'stats.html', context)
 
