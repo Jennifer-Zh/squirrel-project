@@ -8,8 +8,10 @@ urlpatterns = [
     path('', views.index),
     path('map/', views.map, name='map'), 
     path('sightings/', views.sighting),
+    path('sightings/stats/', views.stats, name='stats'),
     path('sightings/add/', views.sighting_add,name='add'),
     path('sightings/<unique_id>/', views.sighting_update, name='update'),
-    path('sightings/stats/', views.stats, name='stats'), 
-]
+   # path('sightings/stats/', views.stats, name='stats'), 
+   # path('sightings/add/', views.sighting_add,name='add'),
+    ]
 
