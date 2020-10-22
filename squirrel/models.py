@@ -8,11 +8,11 @@ class Meta:
 
 # create squirrel
 class Squirrel(models.Model):
-    Longitude  = models.FloatField(
+    Latitude  = models.FloatField(
         help_text = _('E.g. -73.95613449'),
     )
 
-    Latitude = models.FloatField(
+    Longitude = models.FloatField(
         help_text = _('E.g. 40.79408239'),
     )
 
