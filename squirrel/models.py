@@ -8,12 +8,12 @@ class Meta:
 
 # create squirrel
 class Squirrel(models.Model):
-    Longitude  = models.FloatField(
-        help_text = _('E.g. -73.95613449'),
+    Latitude  = models.FloatField(
+        help_text = _('E.g. 40.782091'),
     )
 
-    Latitude = models.FloatField(
-        help_text = _('E.g. 40.79408239'),
+    Longitude = models.FloatField(
+        help_text = _('E.g. -73.964285'),
     )
 
     Unique_squirrel_id = models.CharField(
@@ -59,7 +59,7 @@ class Squirrel(models.Model):
         ]
     Primary_fur_color = models.CharField(
         max_length = 15,
-        help_text = _('Select from the list, or type the color if not in the list'),
+        help_text = _('Select from the list'),
         choices = FUR_CHOICES,
         blank = True,
     )
