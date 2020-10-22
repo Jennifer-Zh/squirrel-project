@@ -6,19 +6,19 @@ Wenxin Zhou (wz2551)
 Yujia Zhang (yz3932) 
 
 ## Goal 
-We are trying to keep track of the squirrels found in the Central Park in 2019, by showing their footprint on a map, and listing their occurences and characteristics, along with the options to update or add new squirrel record. 
+We are trying to keep track of the squirrels found in the Central Park in 2018, by showing their footprint on a map, and listing their occurences and characteristics, along with the options to update or add new squirrel record. 
 
 ## Data Source 
-For this project, we cleaned the dataset to include only squirrels with unique ID, which is the ```Squirrel.csv``` file in the repository.      
-Reference to the original dataset:      
-* creator: City of New York      
-* name: 2018 Central Park Squirrel Census - Squirrel Data     
-* link: https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw     
+* For this project, we cleaned the dataset to include only squirrels with unique ID, which is the ```Squirrel.csv``` file in the repository.      
+* Reference to the original dataset:      
+  * creator: City of New York      
+  * name: 2018 Central Park Squirrel Census - Squirrel Data     
+  * link: https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw     
 
 ## Required Environments 
-* Django 3.1.2     
-* Pillow 8.0.0     
-  You may also run the following command to install:      
+* Django 3.1.2 
+* Pillow 8.0.0
+* You may also run the following command to install: 
   ```
   $ pip install -r requirements.txt
   ``` 
