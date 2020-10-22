@@ -18,14 +18,14 @@ Reference to the original dataset:
 We are trying to keep track of the squirrels found in the Central Park in 2019, by showing their footprint on a map, and listing their occurences and characteristics, along with the options to update or add new squirrel record. 
 
 ## Management Commands 
-* 'import_squirrel_data'     
+### ```import_squirrel_data```  
   This command could import a csv file to a database. The first argument should be the path of csv file.     
-  The user should run the following command to import the squirrel data: 
+  The user should run the following command to import the squirrel data:     
   ```$ python manage.py import_squirrel_data Squirrel.csv``` 
   
-* 'export_squirrel_date'      
+### ```export_squirrel_date```       
   This command could export database to a csv file. The first argument should be the path of csv file. 
-  The user should run the following command to export the squirrel data: 
+  The user should run the following command to export the squirrel data:      
   ```$ python manage.py export_squirrel_data export_data.csv```
 
 ## Different Views  
