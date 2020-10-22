@@ -17,8 +17,8 @@ class Command(BaseCommand):
                 reader = csv.DictReader(f)
                 for i in reader:
                     s = Squirrel(
-                        Latitude = i['X'],
-                        Longitude = i['Y'],
+                        Latitude = i['Y'],
+                        Longitude = i['X'],
                         Unique_squirrel_id = i['Unique Squirrel ID'],
                         Shift = i['Shift'],
                         Date=datetime.date(
