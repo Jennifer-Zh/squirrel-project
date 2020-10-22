@@ -6,7 +6,6 @@ class DateInput(forms.DateInput):
     input_type = "date" 
 
     def __init__ (self, **kwargs):
-        kwargs["format"] = "%mm-%dd%Y"
         super().__init__(**kwargs)
 
 class Form(forms.ModelForm):

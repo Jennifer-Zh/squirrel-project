@@ -35,9 +35,7 @@ class Squirrel(models.Model):
         blank = True,
     )
 
-    Date = models.DateField( 
-        blank = True,
-    )
+    Date = models.DateField()
 
     ADULT = 'Adult'
     JUVENILE = 'Juvenile'
