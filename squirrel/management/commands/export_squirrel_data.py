@@ -14,6 +14,7 @@ class Command(BaseCommand):
         field_names = [field.name for field in fields]
         with open(path, 'w') as f:
             writer = csv.writer(f)
+            writer.writerow(field_names) 
             for i in Squirrel.objects.all():
                 #row = [getattr(i, field.name) for field in fields]
                 writer.writerow([getattr(i, field) for field in field_names])
