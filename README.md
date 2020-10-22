@@ -2,8 +2,10 @@
 This is the squirrel tracker project for course E4501. 
 
 ## Contributors 
-Wenxin Zhou (wz2551)    
-Yujia Zhang (yz3932) 
+Wenxin Zhou      
+Yujia Zhang  
+Group Wenxin & Jennifer 
+UNIs: [wz2551, yz3932] 
 
 ## Goal 
 We are trying to keep track of the squirrels found in the Central Park in 2018, by showing their footprint on a map, and listing their occurences and characteristics, along with the options to update or add new squirrel record. 
