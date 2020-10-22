@@ -2,9 +2,12 @@ from django import forms
 from django.forms import ModelForm
 from .models import Squirrel
 
-def __init__ (self, **kwargs):
-    kwargs["format"] = "%mm-%dd%Y"
-    super().__init__(**kwargs)
+class DateInput(forms.DateInput): 
+    input_type = "date" 
+
+    def __init__ (self, **kwargs):
+        kwargs["format"] = "%mm-%dd%Y"
+        super().__init__(**kwargs)
 
 class Form(forms.ModelForm):
     class Meta:

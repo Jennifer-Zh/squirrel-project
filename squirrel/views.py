@@ -29,7 +29,7 @@ def sighting_update(request, unique_id):
         return redirect('/sightings/')
     else: 
         context = {'form': form} 
-        return render(request, 'sighting_id.html', context) 
+        return render(request, 'sighting_update.html', context) 
 
 def sighting_add(request): 
     if request.method == 'POST': 
