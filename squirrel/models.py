@@ -1,8 +1,7 @@
 from django.db import models
-
-from django.db import models
 from django.utils.translation import gettext as _
 from django.forms import ModelForm
+from django import forms 
 
 class Meta: 
     managed = True 
@@ -10,17 +9,18 @@ class Meta:
 # create squirrel
 class Squirrel(models.Model):
     Longitude  = models.FloatField(
-        help_text = _('Longitude X'),
+        help_text = _('E.g. -73.95613449'),
     )
 
     Latitude = models.FloatField(
-        help_text = _('Latitude Y'),
+        help_text = _('E.g. 40.79408239'),
     )
 
     Unique_squirrel_id = models.CharField(
-        max_length = 50,
+        max_length = 20,
         primary_key = True,
         default = None,
+        help_text = _('E.g. 37F-PM-1014-03') 
     )
 
     PM = 'PM'
@@ -31,13 +31,11 @@ class Squirrel(models.Model):
     ]
     Shift = models.CharField(
         max_length = 10,
-        help_text = _('Shift of squirrel'),
         choices = SHIFT_CHOICES,
         blank = True,
     )
 
-    Date = models.DateField(
-        help_text = _('Date find the squirrel'),
+    Date = models.DateField( 
         blank = True,
     )
 
@@ -49,7 +47,6 @@ class Squirrel(models.Model):
     ]
     Age = models.CharField(
         max_length = 15,
-        help_text = _('Is the squirrel child or adult?'),
         choices = AGE_CHOICES,
         blank = True,
     )
@@ -66,7 +63,7 @@ class Squirrel(models.Model):
     ]
     Primary_fur_color = models.CharField(
         max_length = 15,
-        help_text = _('The primary color of the squirrel fur'),
+        help_text = _('Select from the list, or type the color if not in the list'),
         choices = FUR_CHOICES,
         blank = True,
     )
@@ -77,9 +74,8 @@ class Squirrel(models.Model):
         (GROUND_PLANE, _('Ground Plane')),
         (ABOVE_GROUND, _('Above Ground')),
     ]
-    Location = models.CharField(
-        max_length = 20,
-        help_text = _('Where is the squirrel found?'),
+    Location = models.CharField( 
+        max_length = 20, 
         choices = LOCATION_CHOICES,
         blank = True,
     )
@@ -89,23 +85,23 @@ class Squirrel(models.Model):
     )
 
     Running = models.BooleanField(
-        help_text = _('Is the squirrel running?'),
+        help_text = _('Was the squirrel seen running?'),
     )
 
     Chasing = models.BooleanField(
-        help_text = _('Is the squirrel chasing?'),
+        help_text = _('Was the squirrel seen chasing?'),
     )
 
     Climbing = models.BooleanField(
-        help_text = _('Is the squirrel climbing?'),
+        help_text = _('Was the squirrel seen climbing?'),
     )
 
     Eating = models.BooleanField(
-        help_text = _('Is the squirrel eating?'),
+        help_text = _('Was the squirrel seen eating?'),
     )
 
     Foraging = models.BooleanField(
-        help_text = _('Is the squirrel foraging?'),
+        help_text = _('Was the squirrel seen foraging?'),
     )
 
     Other_activities = models.TextField(
@@ -113,38 +109,36 @@ class Squirrel(models.Model):
     )
 
     Kuks = models.BooleanField(
-        help_text = _('Does the squirrel make kuks sound?'),
+        help_text = _('Did the squirrel make kuks sound?'),
     )
 
     Quaas = models.BooleanField(
-        help_text = _('Does the squirrel make quaas sound?'),
+        help_text = _('Did the squirrel make quaas sound?'),
     )
 
     Moans = models.BooleanField(
-        help_text = _('Does the squirrel moan?'),
+        help_text = _('Did the squirrel moan?'),
     )
 
     Tail_flags = models.BooleanField(
-        help_text = _('Does the squirrel display tail flags?'),
+        help_text = _('Was the squirrel seen flagging its tail?'),
     )
 
     Tail_twitches = models.BooleanField(
-        help_text = _('Does the squirrel display tail twitches?'),
+        help_text = _('Was the squirrel seen wtitching its tail?'),
     )
 
     Approaches = models.BooleanField(
-        help_text = _('Does the squirrel approach humans?'),
+        help_text = _('Was the squirrel seen approaching humans?'),
     )
 
     Indifferent = models.BooleanField(
-        help_text = _('Is the squirrel indifferent to human presence?'),
+        help_text = _('Was the squirrel indifferent to human presence?'),
     )
 
     Runs_from = models.BooleanField(
-        help_text = _('Does the squirrel run away when seeing humans?'),
+        help_text = _('Was the squirrel running away when seeing humans?'),
     )
 
     def __str__(self):
         return self.Unique_squirrel_id
-
-
