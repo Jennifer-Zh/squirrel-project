@@ -21,7 +21,7 @@
     }
 
     ul {
-      columns: 4;
+      columns: 3;
     }
   </style>
 
@@ -29,19 +29,24 @@
 
 <body>
   <h1 class="strong mt-3 text-center">List of Unique Squirrels</h1>
-  <div class="nav-scroller py-1 mb-2">
-   <nav class="nav d-flex justify-content-between">
-      <a class="p-2 text-muted" href="/sightings/stats/">Statistics</a >
-      <a class="p-2 text-muted" href="/sightings/add/">Add new Squirrel</a >
-   </nav>
-  </div>
+	<center>
+  <a href='/sightings/stats' class='col-4'>
+     
+        <button type="button" class='btn btn-info'>Statistics</button>
+      
+    </a>
+        <a href='/sightings/add/' class='col-4'>
+
+        <button type="button" class='btn btn-warning'>Add New Squirrels</button>
+    </a>
+	</center>
   <div>
     <ul>
       {% for squirrel in squirrels %}
       <li>
 
-        <a href='/sightings/{{squirrel.Unique_squirrel_id}}/'>{{ squirrel.Unique_squirrel_id }}</a>
-
+        ID:<a href='/sightings/{{squirrel.Unique_squirrel_id}}/'>{{ squirrel.Unique_squirrel_id }}</a>
+	Date:{{squirrel.Date}}
       </li>
       {% endfor %}
     </ul>
