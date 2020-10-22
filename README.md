@@ -4,7 +4,7 @@ This is the squirrel tracker project for course E4501.
 ## Contributors 
 Wenxin Zhou      
 Yujia Zhang  
-Group Wenxin & Jennifer 
+Group Wenxin & Jennifer     
 UNIs: [wz2551, yz3932] 
 
 ## Goal 
