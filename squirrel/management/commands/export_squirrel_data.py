@@ -11,10 +11,11 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         path = args[0]
         fields = Squirrel._meta.fields
+        field_names = [field.name for field in fields]
         with open(path, 'w') as f:
             writer = csv.writer(f)
             for i in Squirrel.objects.all():
-                row = [getattr(i, field.name) for field in fields]
-                writer.writerow(row)
+                #row = [getattr(i, field.name) for field in fields]
+                writer.writerow([getattr(i, field) for field in field_names])
             f.close()
 
