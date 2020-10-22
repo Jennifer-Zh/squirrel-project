@@ -52,13 +52,11 @@ class Squirrel(models.Model):
     GRAY = 'Gray'
     CINNAMON  = 'Cinnamon'
     BLACK = 'Black'
-    OTHER = 'Other'
     FUR_CHOICES = [
         (GRAY, _('Gray')),
         (CINNAMON, _('Cinnamon')),
         (BLACK, _('Black')),
-        (OTHER, _('Other')),
-    ]
+        ]
     Primary_fur_color = models.CharField(
         max_length = 15,
         help_text = _('Select from the list, or type the color if not in the list'),
