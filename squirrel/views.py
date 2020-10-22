@@ -1,7 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse
 from .models import Squirrel
-from django.views.generic import TemplateView, ListView
 from .forms import Form 
 
 # homepage 
