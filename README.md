@@ -6,6 +6,10 @@ Wenxin Zhou (wz2551)
 Yujia Zhang (yz3932) 
 
 ## Data Source 
+
+In this project we cleaned the dataset to include only squirrels with unique ID, which is the squirrels.csv file in the repository.
+
+Reference to the original dataset is from:
 * creator: City of New York      
 * name: 2018 Central Park Squirrel Census - Squirrel Data     
 * link: https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw     
