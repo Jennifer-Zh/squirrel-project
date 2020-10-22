@@ -30,28 +30,29 @@
 <body>
   <h1 class="strong mt-3 text-center">List of Unique Squirrels</h1>
 	<center>
-  <a href='/sightings/stats' class='col-4'>
-     
-        <button type="button" class='btn btn-info'>Statistics</button>
-      
+  <a href='' class='col=4'>
+	<button type="button" class='btn btn-info'>Homepage</button>
+    </a> 
+  <a href='/map/' class='col-4'>
+        <button type="button" class='btn btn-outline-success'>Squirrels Map</button>
     </a>
-        <a href='/sightings/add/' class='col-4'>
-
-        <button type="button" class='btn btn-warning'>Add New Squirrels</button>
+  <a href='/sightings/stats' class='col-4'>
+        <button type="button" class='btn btn-info'>Statistics</button>
+    </a>
+  <a href='/sightings/add/' class='col-4'>
+        <button type="button" class='btn btn-warning'>Add a New Squirrel</button>
     </a>
 	</center>
   <div>
     <ul>
       {% for squirrel in squirrels %}
       <li>
-
-        ID:<a href='/sightings/{{squirrel.Unique_squirrel_id}}/'>{{ squirrel.Unique_squirrel_id }}</a>
-	Date:{{squirrel.Date}}
+        ID: <a href='/sightings/{{squirrel.Unique_squirrel_id}}/'>{{ squirrel.Unique_squirrel_id }}</a>
+	Date: {{squirrel.Date}}
       </li>
       {% endfor %}
     </ul>
   </div>
 
 </body>
-
 </html>
