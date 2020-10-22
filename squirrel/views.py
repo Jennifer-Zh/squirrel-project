@@ -5,26 +5,19 @@ from django.views.generic import TemplateView, ListView
 from .forms import Form 
 
 def index(request):
-    squirrels  = Squirrel.objects.all()[:100]
-    context={
-        'squirrels':squirrels
-    }
+    squirrels = Squirrel.objects.all()[:100]
+    context = {'squirrels':squirrels}
     return render(request,'index.html', context)
 
 def map(request):
-    squirrels  = Squirrel.objects.all()[:100]
-    context = {
-       'squirrels' : squirrels,
-       }
+    squirrels = Squirrel.objects.all()[:100]
+    context = {'squirrels' : squirrels}
     return render(request, 'map.html', context) 
 
 def sighting(request):
-    squirrels  = Squirrel.objects.all()
-    context = {
-       'squirrels' : squirrels,
-       }
+    squirrels = Squirrel.objects.all()
+    context = {'squirrels' : squirrels}
     return render(request, 'sighting.html', context)
-
 
 def sighting_update(request, unique_id): 
     Object = get_object_or_404(Squirrel, Unique_squirrel_id = unique_id) 
@@ -35,11 +28,8 @@ def sighting_update(request, unique_id):
         Object.save()
         return redirect('/sightings/')
     else: 
-        context = {
-            'form': form, 
-        } 
+        context = {'form': form} 
         return render(request, 'sighting_id.html', context) 
-
 
 def sighting_add(request): 
     if request.method == 'POST': 
@@ -53,17 +43,17 @@ def sighting_add(request):
 
 def stats(request):
     total = Squirrel.objects.count()
-    adultper=round(Squirrel.objects.filter(Age='Adult').count()/total,2)
-    jueper=round(Squirrel.objects.filter(Age='Juvenile').count()/total,2)
-    pmper=round(Squirrel.objects.filter(Shift='PM').count()/total,2)
-    amper=round(Squirrel.objects.filter(Shift='AM').count()/total,2)
+    adultper = round(Squirrel.objects.filter(Age='Adult').count()/total,2)
+    jueper = round(Squirrel.objects.filter(Age='Juvenile').count()/total,2)
+    pmper = round(Squirrel.objects.filter(Shift='PM').count()/total,2)
+    amper = round(Squirrel.objects.filter(Shift='AM').count()/total,2)
     
-    running= Squirrel.objects.filter(Running=True).count()
-    chasing=Squirrel.objects.filter(Chasing=True).count()
-    climbing=Squirrel.objects.filter(Climbing=True).count()
-    eating=Squirrel.objects.filter(Eating=True).count()
-    tailflag=Squirrel.objects.filter(Tail_flags=True).count()
-    tailtwitch=Squirrel.objects.filter(Tail_twitches=True).count()
+    running = Squirrel.objects.filter(Running=True).count()
+    chasing = Squirrel.objects.filter(Chasing=True).count()
+    climbing = Squirrel.objects.filter(Climbing=True).count()
+    eating = Squirrel.objects.filter(Eating=True).count()
+    tailflag = Squirrel.objects.filter(Tail_flags=True).count()
+    tailtwitch = Squirrel.objects.filter(Tail_twitches=True).count()
     context = {
             'climbing':climbing,
             'running' : running,
@@ -78,5 +68,3 @@ def stats(request):
             'tailtwitch':tailtwitch,
            }
     return render(request, 'stats.html', context)
-
-

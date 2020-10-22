@@ -1,4 +1,3 @@
-#from django.contrib import admin 
 from django.urls import path, include 
 from .  import views 
 
@@ -11,7 +10,5 @@ urlpatterns = [
     path('sightings/stats/', views.stats, name='stats'),
     path('sightings/add/', views.sighting_add,name='add'),
     path('sightings/<unique_id>/', views.sighting_update, name='update'),
-   # path('sightings/stats/', views.stats, name='stats'), 
-   # path('sightings/add/', views.sighting_add,name='add'),
     ]
 
