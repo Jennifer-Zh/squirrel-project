@@ -4,16 +4,16 @@ from .models import Squirrel
 from django.views.generic import TemplateView, ListView
 from .forms import Form 
 
+# homepage 
 def index(request):
-    squirrels = Squirrel.objects.all()[:100]
-    context = {'squirrels':squirrels}
-    return render(request,'index.html', context)
+    return render(request,'index.html', {})
 
 def map(request):
     squirrels = Squirrel.objects.all()[:100]
     context = {'squirrels' : squirrels}
     return render(request, 'map.html', context) 
 
+# sighting mainpage 
 def sighting(request):
     squirrels = Squirrel.objects.all()
     context = {'squirrels' : squirrels}
@@ -22,13 +22,13 @@ def sighting(request):
 def sighting_update(request, unique_id): 
     Object = get_object_or_404(Squirrel, Unique_squirrel_id = unique_id) 
     form = Form(request.POST or None, instance = Object) 
-    context = {'form':form} 
+    context = {'form': form} 
     if form.is_valid(): 
-        Object = form.save(commit=False) 
-        Object.save()
+        Object = form.save(commit = False) 
+        Object.save() 
         return redirect('/sightings/')
     else: 
-        context = {'form': form} 
+        context = {'form' : form} 
         return render(request, 'sighting_update.html', context) 
 
 def sighting_add(request): 
@@ -39,7 +39,8 @@ def sighting_add(request):
         return redirect('/sightings/')
     else:
         form = Form()
-    return render(request, 'sighting_add.html', {'form':form})
+        context = {'form' : form} 
+    return render(request, 'sighting_add.html', context)
 
 def stats(request):
     total = Squirrel.objects.count()
@@ -56,7 +57,7 @@ def stats(request):
     tailtwitch = Squirrel.objects.filter(Tail_twitches=True).count()
     context = {
             'climbing':climbing,
-            'running' : running,
+            'running':running,
             'chasing': chasing,
             'eating':eating,
             'tailflag':tailflag,
