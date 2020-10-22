@@ -14,10 +14,14 @@
     }
 
     body {
-      color: #FFB5A5;
+      color: Black;
       font-size: 16pt;
       font-family: times;
       background: #EEFFD0;
+    }
+    p{
+	    margin:35px;
+	    text-indent: 2.0em;
     }
 
   </style>
@@ -25,30 +29,45 @@
 </head>
 
 <body>
+
   <h1 class="strong mt-3 text-center">Squirrels in Central Park</h1>
-  <div class="nav-scroller py-1 mb-2">
-   <nav class="nav d-flex justify-content-between">
-      <a class="p-2 text-muted" href="/sightings/stats/">Statistics</a >
-      <a class="p-2 text-muted" href="/map/">Squirrels Map</a >
-      <a class="p-2 text-muted" href="/sightings/">Sightings</a >
-      <a class="p-2 text-muted" href="/sightings/add/">Add new Squirrel</a >
-   </nav>
-  </div>
-  <p> Let's see where are the squirrels ^^
-  <center>
-  <img src='https://render.fineartamerica.com/images/rendered/default/wood-print/12/7/break/images/artworkimages/medium/2/cute-squirrel-kativ.jpg' >
-  </center>
-  <div class="container row pt-5">
+  </br>         <center>
     <a href='/map/' class='col-4'>
-      <center>
-        <button type="button" class='btn btn-info'>See them in the map</button>
-      </center>
+
+        <button type="button" class='btn btn-outline-success'>Squirrels Map</button>
+
     </a>
         <a href='/sightings/' class='col-4'>
 
-        <button type="button" class='btn btn-warning'>See unique squirrel information</button>
+        <button type="button" class='btn btn-outline-danger'>Sightings</button>
+    </a>
+        <a href='/sightings/stats/' class='col-4'>
+
+        <button type="button" class='btn btn-outline-warning'>Statistics</button>
+
+    </a>
+        <a href='/sightings/add/' class='col-4'>
+
+		<button type="button" class='btn btn-outline-info'>Add a New Squirrel</button>
+    </a>
+          </center>
+	  </br><p> We are trying to keep track of the squirrels in the Central Park. You can find squirrels' positions in the map and their detailed information on the sightings page. You may also update their information by clicking on their ID link. We provide a statistic summary of current data in the Statistics page; and you are welcome to add new squirrels to the dataset in the Add a New Squirrel page.  
+        </br> <p> Let's see where are the squirrels ^^
+	  <center>
+    <a href='/map/' class='col-4'>
+      
+        <button type="button" class='btn btn-info'>Find them in the map!</button>
       
     </a>
+        <a href='/sightings/' class='col-4'>
+
+		<button type="button" class='btn btn-warning'>See unique squirrel information -></button>
+    </a>
+	  </center>
+ 
+	    <center>
+  <img src='https://render.fineartamerica.com/images/rendered/default/wood-print/12/7/break/images/artworkimages/medium/2/cute-squirrel-kativ.jpg' >
+  </center>
   <div>
   <script src="https://code.jquery.com/jquery-3.4.0.min.js"
     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
@@ -59,5 +78,4 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 </body>
-
 </html>
