@@ -7,7 +7,7 @@ Yujia Zhang (yz3932)
 
 ## Data Source 
 
-In this project we cleaned the dataset to include only squirrels with unique ID, which is the squirrels.csv file in the repository.
+In this project we cleaned the dataset to include only squirrels with unique ID, which is the Squirrel.csv file in the repository.
 
 Reference to the original dataset is from:
 * creator: City of New York      
