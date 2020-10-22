@@ -50,8 +50,13 @@ We are trying to keep track of the squirrels found in the Central Park.
 * 'import_squirrel_data'     
   This command could import a csv file to a database. The first argument should be the path of csv file. 
   
-  e.g. run - $ python manage.py import_data Squirrel.csv to add data file
+  e.g. run - $ python manage.py import_squirrel_data Squirrel.csv to add data file
+  
 * 'export_squirrel_date'      
   This command could export database to a csv file. The first argument should be the path of csv file. 
+  
+  e.g. run - $ python manage.py export_squirrel_data Squirrel.csv to export data file
+  
+
 
 ## License 
